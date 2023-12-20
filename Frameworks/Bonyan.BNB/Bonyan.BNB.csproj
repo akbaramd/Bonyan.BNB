@@ -26,8 +26,5 @@
         <PackageReference Include="Nito.AsyncEx.Context" Version="5.1.2" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Bonyan\BNB\DependencyInjection\" />
-    </ItemGroup>
 
 </Project>
