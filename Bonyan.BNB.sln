@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonyan.BNB", "Frameworks\Bonyan.BNB\Bonyan.BNB.csproj", "{5E8EE3E1-1899-42C1-876A-28F332C2380D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frameworks", "Frameworks", "{001F2F4E-41BE-48D9-959C-5F55FE5A1C81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E8EE3E1-1899-42C1-876A-28F332C2380D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E8EE3E1-1899-42C1-876A-28F332C2380D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E8EE3E1-1899-42C1-876A-28F332C2380D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E8EE3E1-1899-42C1-876A-28F332C2380D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5E8EE3E1-1899-42C1-876A-28F332C2380D} = {001F2F4E-41BE-48D9-959C-5F55FE5A1C81}
+	EndGlobalSection
+EndGlobal

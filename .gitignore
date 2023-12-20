@@ -1,0 +1,13 @@
+﻿.idea
+.vs
+Bonyan.BNB.sln.DotSettings.user
+**/bin
+**/obj
+
+**/migrations
+
+**/node_modules
+
+
+**/*.editorconfig
+
