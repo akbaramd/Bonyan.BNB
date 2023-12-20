@@ -1,4 +1,4 @@
-﻿namespace Bonyan.Bnb.Modularity;
+﻿namespace Bonyan.Bnb.DependencyInjection;
 
 public interface IBnbServiceProviderAccessor
 {

@@ -2,7 +2,6 @@
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
-using Bonyan.Bnb;
 using Bonyan.Bnb.Extensions;
 using Bonyan.Bnb.Statics;
 using JetBrains.Annotations;
@@ -45,7 +44,7 @@ public static class BnbStringExtensions
     /// Indicates whether this string is null or an System.String.Empty string.
     /// </summary>
     [ContractAnnotation("str:null => true")]
-    public static bool IsNullOrEmpty([System.Diagnostics.CodeAnalysis.NotNullWhen(false)]this string? str)
+    public static bool IsNullOrEmpty([global::System.Diagnostics.CodeAnalysis.NotNullWhen(false)]this string? str)
     {
         return string.IsNullOrEmpty(str);
     }
@@ -54,7 +53,7 @@ public static class BnbStringExtensions
     /// indicates whether this string is null, empty, or consists only of white-space characters.
     /// </summary>
     [ContractAnnotation("str:null => true")]
-    public static bool IsNullOrWhiteSpace([System.Diagnostics.CodeAnalysis.NotNullWhen(false)]this string? str)
+    public static bool IsNullOrWhiteSpace([global::System.Diagnostics.CodeAnalysis.NotNullWhen(false)]this string? str)
     {
         return string.IsNullOrWhiteSpace(str);
     }
@@ -568,7 +567,7 @@ public static class BnbStringExtensions
     /// <summary>
     /// Converts given string to a byte array using the given <paramref name="encoding"/>
     /// </summary>
-    public static byte[] GetBytes([Diagnostics.CodeAnalysis.NotNull] this string str, [Diagnostics.CodeAnalysis.NotNull] Encoding encoding)
+    public static byte[] GetBytes([global::System.Diagnostics.CodeAnalysis.NotNull] this string str, [global::System.Diagnostics.CodeAnalysis.NotNull] Encoding encoding)
     {
         BnbCheck.NotNull(str, nameof(str));
         BnbCheck.NotNull(encoding, nameof(encoding));

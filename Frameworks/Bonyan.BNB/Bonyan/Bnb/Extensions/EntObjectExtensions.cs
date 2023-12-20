@@ -20,7 +20,7 @@ public static class BnbObjectExtensions
     }
 
     /// <summary>
-    /// Converts given object to a value type using <see cref="Convert.ChangeType(object,System.Type)"/> method.
+    /// Converts given object to a value type using <see cref="Convert.ChangeType(object?,System.Type)"/> method.
     /// </summary>
     /// <param name="obj">Object to be converted</param>
     /// <typeparam name="T">Type of the target object</typeparam>

@@ -105,7 +105,7 @@ public static class BnbQueryableExtensions
         BnbCheck.NotNull(query, nameof(query));
 
         return condition
-            ? (TQueryable)Dynamic.Core.DynamicQueryableExtensions.OrderBy(query, sorting)
+            ? (TQueryable)global::System.Linq.Dynamic.Core.DynamicQueryableExtensions.OrderBy(query, sorting)
             : query;
     }
 }

@@ -1,8 +1,9 @@
-﻿using Bonyan.Bnb.Statics;
+﻿using Bonyan.Bnb.DependencyInjection;
+using Bonyan.Bnb.Statics;
 
 namespace Bonyan.Bnb.Modularity;
 
-public class BnbApplicationInitializationContext : IServiceProviderAccessor
+public class BnbApplicationInitializationContext : IBnbServiceProviderAccessor
 {
     public IServiceProvider ServiceProvider { get; set; }
 

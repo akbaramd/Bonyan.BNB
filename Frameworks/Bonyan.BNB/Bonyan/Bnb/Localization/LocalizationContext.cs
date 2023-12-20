@@ -1,4 +1,4 @@
-﻿using Bonyan.Bnb.Modularity;
+﻿using Bonyan.Bnb.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
 

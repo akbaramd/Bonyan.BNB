@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using Bonyan.Bnb.Exceptions;
+﻿using Bonyan.Bnb.Exceptions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
