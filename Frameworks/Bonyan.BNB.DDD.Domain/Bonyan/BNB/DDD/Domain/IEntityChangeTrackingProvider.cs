@@ -1,4 +1,4 @@
-﻿namespace Bonyan.BNB.Domain.Repository;
+﻿namespace Bonyan.BNB.DDD.Domain;
 
 public interface IEntityChangeTrackingProvider
 {

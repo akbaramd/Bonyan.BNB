@@ -1,7 +1,7 @@
 using Bonyan.Bnb;
 using Bonyan.Bnb.Modularity;
 
-namespace Bonyan.BNB.AspNetCore.Microsoft.Extensions.DependencyInjection;
+namespace Microsoft.Extensions.DependencyInjection;
 
 public static class BnbWebApplicationBuilderExtensions
 {

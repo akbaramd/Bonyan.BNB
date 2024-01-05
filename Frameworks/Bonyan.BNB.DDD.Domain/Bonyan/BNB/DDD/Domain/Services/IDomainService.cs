@@ -1,8 +1,8 @@
 ﻿using Bonyan.Bnb.DependencyInjection;
 
-namespace Bonyan.BNB.Domain.Services;
+namespace Bonyan.BNB.DDD.Domain.Services;
 
-public interface IEntDomainService : ITransientDependency
+public interface IBnbDomainService : ITransientDependency
 {
 
 }

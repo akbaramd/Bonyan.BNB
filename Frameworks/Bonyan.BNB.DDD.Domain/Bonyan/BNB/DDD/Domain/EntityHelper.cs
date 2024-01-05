@@ -1,12 +1,12 @@
 using System.Linq.Expressions;
 using System.Reflection;
-using Bonyan.BNB.Domain.Entities;
-using Bonyan.BNB.Domain.Values;
+using Bonyan.BNB.DDD.Domain.Entities;
+using Bonyan.BNB.DDD.Domain.Values;
 using Bonyan.Bnb.Helpers;
 using Bonyan.Bnb.Reflection;
 using Bonyan.Bnb.Statics;
 
-namespace Bonyan.BNB.Domain;
+namespace Bonyan.BNB.DDD.Domain;
 
 /// <summary>
 /// Some helper methods for entities.
@@ -95,7 +95,7 @@ public static class EntityHelper
         return typeof(IBnbEntity).IsAssignableFrom(type);
     }
 
-    public static Func<Type, bool> IsValueObjectPredicate = type => typeof(EntValueObject).IsAssignableFrom(type);
+    public static Func<Type, bool> IsValueObjectPredicate = type => typeof(ValueObject).IsAssignableFrom(type);
 
     public static bool IsValueObject(Type type)
     {

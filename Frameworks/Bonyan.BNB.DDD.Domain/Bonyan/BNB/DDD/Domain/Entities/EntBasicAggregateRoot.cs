@@ -1,11 +1,11 @@
 using System.Collections.ObjectModel;
 
-namespace Bonyan.BNB.Domain.Entities;
+namespace Bonyan.BNB.DDD.Domain.Entities;
 
 [Serializable]
 public abstract class BasicAggregateRoot : BnbEntity,
-    IEntAggregateRoot,
-    IEntGeneratesDomainEvents
+    IBnbAggregateRoot,
+    IBnbGeneratesDomainEvents
 {
     private readonly ICollection<DomainEventRecord> _distributedEvents = new Collection<DomainEventRecord>();
     private readonly ICollection<DomainEventRecord> _localEvents = new Collection<DomainEventRecord>();
@@ -44,11 +44,11 @@ public abstract class BasicAggregateRoot : BnbEntity,
 [Serializable]
 public abstract class BasicAggregateRoot<TKey> : 
     BnbEntity<TKey>,
-    IEntAggregateRoot<TKey>,
+    IBnbAggregateRoot<TKey>,
     IBnbEntity<TKey>,
     IBnbEntity,
-    IEntAggregateRoot,
-    IEntGeneratesDomainEvents
+    IBnbAggregateRoot,
+    IBnbGeneratesDomainEvents
 {
     private readonly ICollection<DomainEventRecord> _distributedEvents = (ICollection<DomainEventRecord>) new Collection<DomainEventRecord>();
     private readonly ICollection<DomainEventRecord> _localEvents = (ICollection<DomainEventRecord>) new Collection<DomainEventRecord>();

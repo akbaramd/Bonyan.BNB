@@ -2,7 +2,7 @@ using Bonyan.Bnb;
 using Bonyan.Bnb.Statics;
 using Bonyan.Bnb.Threading;
 
-namespace Bonyan.BNB.AspNetCore.Microsoft.AspNetCore.Builder;
+namespace Microsoft.AspNetCore.Builder;
 
 public static class BnbApplicationBuilderExtensions
 {

@@ -1,7 +1,7 @@
 using Bonyan.BNB.Auditing;
-using Bonyan.BNB.Domain.Entities;
+using Bonyan.BNB.DDD.Domain.Entities;
 
-namespace Bonyan.BNB.Domain.Auditing;
+namespace Bonyan.BNB.DDD.Domain.Auditing;
 
 /// <summary>
 /// This class can be used to simplify implementing <see cref="ICreationAuditedObject"/> for aggregate roots.

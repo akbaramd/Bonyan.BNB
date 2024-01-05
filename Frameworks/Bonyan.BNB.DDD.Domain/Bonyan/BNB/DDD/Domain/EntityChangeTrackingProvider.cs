@@ -1,7 +1,7 @@
 ﻿using Bonyan.Bnb;
 using Bonyan.Bnb.DependencyInjection;
 
-namespace Bonyan.BNB.Domain.Repository;
+namespace Bonyan.BNB.DDD.Domain;
 
 public class EntityChangeTrackingProvider : IEntityChangeTrackingProvider, ISingletonDependency
 {

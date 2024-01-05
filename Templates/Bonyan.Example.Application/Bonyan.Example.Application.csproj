@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Frameworks\Bonyan.BNB.DDD.Application\Bonyan.BNB.DDD.Application.csproj" />
+      <ProjectReference Include="..\..\Frameworks\Bonyan.BNB\Bonyan.BNB.csproj" />
+      <ProjectReference Include="..\Bonyan.Example.Application.Contracts\Bonyan.Example.Application.Contracts.csproj" />
+      <ProjectReference Include="..\Bonyan.Example.Domain\Bonyan.Example.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

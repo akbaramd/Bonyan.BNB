@@ -56,6 +56,8 @@ function Publish-DotnetProject {
   
 }
 
+dotnet test 
+
 # Change to the 'Src' folder
 Set-Location -Path .\Frameworks\
 

@@ -1,6 +1,6 @@
-namespace Bonyan.BNB.Domain.Entities;
+namespace Bonyan.BNB.DDD.Domain.Entities;
 
-public interface IEntGeneratesDomainEvents
+public interface IBnbGeneratesDomainEvents
 {
     IEnumerable<DomainEventRecord> GetLocalEvents();
 

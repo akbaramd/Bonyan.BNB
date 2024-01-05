@@ -1,6 +1,6 @@
 using Bonyan.BNB.Auditing;
 
-namespace Bonyan.BNB.Domain.Auditing;
+namespace Bonyan.BNB.DDD.Domain.Auditing;
 
 
 /// <summary>

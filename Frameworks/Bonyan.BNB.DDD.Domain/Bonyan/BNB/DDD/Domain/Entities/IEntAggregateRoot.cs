@@ -1,11 +1,11 @@
-namespace Bonyan.BNB.Domain.Entities;
+namespace Bonyan.BNB.DDD.Domain.Entities;
 
-public interface IEntAggregateRoot : IBnbEntity
+public interface IBnbAggregateRoot : IBnbEntity
 {
     
 }
 
-public interface IEntAggregateRoot<TKey> : IBnbEntity<TKey>, IEntAggregateRoot
+public interface IBnbAggregateRoot<TKey> : IBnbEntity<TKey>, IBnbAggregateRoot
 {
     
 }

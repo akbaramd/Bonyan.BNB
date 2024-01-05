@@ -1,7 +1,7 @@
 ﻿using System.Linq.Expressions;
-using Bonyan.BNB.Domain.Entities;
+using Bonyan.BNB.DDD.Domain.Entities;
 
-namespace Bonyan.BNB.Domain.Repository;
+namespace Bonyan.BNB.DDD.Domain;
 
 public interface ISupportsExplicitLoading<TEntity>
     where TEntity : class, IBnbEntity

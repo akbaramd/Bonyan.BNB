@@ -1,4 +1,4 @@
-﻿namespace Bonyan.BNB.Domain.Entities;
+﻿namespace Bonyan.BNB.DDD.Domain.Entities;
 
 public class EntityNotFoundException : Exception
 {

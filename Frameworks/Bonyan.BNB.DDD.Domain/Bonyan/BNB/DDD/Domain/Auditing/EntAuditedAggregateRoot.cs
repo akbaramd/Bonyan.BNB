@@ -1,6 +1,6 @@
 using Bonyan.BNB.Auditing;
 
-namespace Bonyan.BNB.Domain.Auditing;
+namespace Bonyan.BNB.DDD.Domain.Auditing;
 
 /// <summary>
 /// This class can be used to simplify implementing <see cref="IAuditedObject"/> for aggregate roots.

@@ -1,6 +1,6 @@
-namespace Bonyan.BNB.Domain.Values;
+namespace Bonyan.BNB.DDD.Domain.Values;
 
-public abstract class EntValueObject
+public abstract class ValueObject
 {
     protected abstract IEnumerable<object> GetAtomicValues();
 
@@ -11,7 +11,7 @@ public abstract class EntValueObject
             return false;
         }
 
-        var other = (EntValueObject)obj;
+        var other = (ValueObject)obj;
 
         var thisValues = GetAtomicValues().GetEnumerator();
         var otherValues = other.GetAtomicValues().GetEnumerator();
