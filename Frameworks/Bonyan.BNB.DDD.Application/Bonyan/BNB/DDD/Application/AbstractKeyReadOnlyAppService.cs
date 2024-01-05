@@ -2,17 +2,21 @@
 using Bonyan.BNB.DDD.Application.Services;
 using Bonyan.BNB.DDD.Domain.Entities;
 using Bonyan.BNB.DDD.Domain.Repository;
+using Bonyan.Bnb.DependencyInjection;
 
 namespace Bonyan.BNB.DDD.Application;
 
 public abstract class  AbstractKeyReadOnlyAppService<TEntity,TResultDto, TKey, TListQueryDto> : 
     AbstractKeyReadOnlyAppService<TEntity,TResultDto,TResultDto,TKey,TListQueryDto> where TEntity : IBnbEntity<TKey>
-{ }
+{
+    protected AbstractKeyReadOnlyAppService(IBnbLazyServiceProvider lazyServiceProvider) : base(lazyServiceProvider)
+    {
+    }
+}
 
 public abstract class  AbstractKeyReadOnlyAppService<TEntity,TResultDto,TResultListDto, TKey, TListQueryDto> : ApplicationService,
     IReadOnlyAppService<TResultDto,TResultListDto,TKey,TListQueryDto> where TEntity : IBnbEntity<TKey>
 {
-
 
     public IReadOnlyRepository<TEntity, TKey> Repository =>
         LazyServiceProvider.LazyGetRequiredService<IReadOnlyRepository<TEntity, TKey>>();
@@ -29,5 +33,9 @@ public abstract class  AbstractKeyReadOnlyAppService<TEntity,TResultDto,TResultL
         var count = await Repository.CountAsync(x=>true);
         var mapped = Mapper.Map<List<TEntity>, List<TResultListDto>>(entity);
         return new PagedResultDto<TResultListDto>(count,mapped.AsReadOnly());
+    }
+
+    protected AbstractKeyReadOnlyAppService(IBnbLazyServiceProvider lazyServiceProvider) : base(lazyServiceProvider)
+    {
     }
 }

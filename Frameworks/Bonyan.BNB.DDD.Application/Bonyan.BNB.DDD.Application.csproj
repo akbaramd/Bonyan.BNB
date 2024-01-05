@@ -13,6 +13,7 @@
     <ItemGroup>
       <ProjectReference Include="..\Bonyan.BNB.DDD.Application.Contracts\Bonyan.BNB.DDD.Application.Contracts.csproj" />
       <ProjectReference Include="..\Bonyan.BNB.DDD.Domain\Bonyan.BNB.DDD.Domain.csproj" />
+      <ProjectReference Include="..\Bonyan.BNB.ObjectMapping\Bonyan.BNB.ObjectMapping.csproj" />
       <ProjectReference Include="..\Bonyan.BNB\Bonyan.BNB.csproj" />
     </ItemGroup>
 

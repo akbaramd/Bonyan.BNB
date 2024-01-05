@@ -47,7 +47,9 @@ public class AppServiceTests
     }
     public class PersonService : CrudAppService<Person,PersonDto,Guid>, IPersonService
     {
-      
+        public PersonService(IBnbLazyServiceProvider lazyServiceProvider) : base(lazyServiceProvider)
+        {
+        }
     }
    
 }

@@ -1,7 +1,7 @@
 ﻿using Bonyan.Bnb.Attributes;
 using Bonyan.Bnb.Modularity;
 using Bonyan.Example.Domain;
-using Bonyan.Example.Domain.Aggregates.Product;
+using Bonyan.Example.Domain.Aggregates.Products;
 using Bonyan.Example.Infrastructure.Mongo.Repositories;
 using Bonyan.Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;

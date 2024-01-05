@@ -1,3 +1,5 @@
+using Bonyan.BNB.Auditing;
+
 namespace Bonyan.BNB.DDD.Application.Dtos;
 
 /// <summary>

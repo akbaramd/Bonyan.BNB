@@ -2,34 +2,39 @@
 using Bonyan.BNB.DDD.Application.Services;
 using Bonyan.BNB.DDD.Domain.Entities;
 using Bonyan.BNB.DDD.Domain.Repository;
+using Bonyan.Bnb.DependencyInjection;
 
 namespace Bonyan.BNB.DDD.Application;
 
 public abstract class  AbstractKeyCrudAppService<TEntity,TResultDto, TKey> : 
     AbstractKeyCrudAppService<TEntity,TResultDto,TResultDto,TKey,PagedAndSortedResultRequestDto,TResultDto,TResultDto> where TEntity : IBnbEntity<TKey>
 {
-
-  
+    protected AbstractKeyCrudAppService(IBnbLazyServiceProvider lazyServiceProvider) : base(lazyServiceProvider)
+    {
+    }
 }
 
 public abstract class  AbstractKeyCrudAppService<TEntity,TResultDto, TKey, TListQueryDto> : 
     AbstractKeyCrudAppService<TEntity,TResultDto,TResultDto,TKey,TListQueryDto,TResultDto,TResultDto> where TEntity : IBnbEntity<TKey>
 {
-
-  
+    protected AbstractKeyCrudAppService(IBnbLazyServiceProvider lazyServiceProvider) : base(lazyServiceProvider)
+    {
+    }
 }
 
 public abstract class  AbstractKeyCrudAppService<TEntity,TResultDto, TKey, TListQueryDto,TCreateAndUpdateDto> : 
     AbstractKeyCrudAppService<TEntity,TResultDto,TResultDto,TKey,TListQueryDto,TCreateAndUpdateDto,TCreateAndUpdateDto> where TEntity : IBnbEntity<TKey>
 {
-
-  
+    protected AbstractKeyCrudAppService(IBnbLazyServiceProvider lazyServiceProvider) : base(lazyServiceProvider)
+    {
+    }
 }
 public abstract class  AbstractKeyCrudAppService<TEntity,TResultDto,TResultListDto, TKey, TListQueryDto,TCreateAndUpdateDto> : 
     AbstractKeyCrudAppService<TEntity,TResultDto,TResultListDto,TKey,TListQueryDto,TCreateAndUpdateDto,TCreateAndUpdateDto> where TEntity : IBnbEntity<TKey>
 {
-
-  
+    protected AbstractKeyCrudAppService(IBnbLazyServiceProvider lazyServiceProvider) : base(lazyServiceProvider)
+    {
+    }
 }
 public abstract class  AbstractKeyCrudAppService<TEntity,TResultDto,TResultListDto, TKey, TListQueryDto,TCreateDto,TUpdateDto> : 
     AbstractKeyReadOnlyAppService<TEntity,TResultDto,TResultListDto,TKey,TListQueryDto> ,
@@ -59,5 +64,8 @@ public abstract class  AbstractKeyCrudAppService<TEntity,TResultDto,TResultListD
         await Repository.DeleteAsync(id);
     }
 
-  
+
+    protected AbstractKeyCrudAppService(IBnbLazyServiceProvider lazyServiceProvider) : base(lazyServiceProvider)
+    {
+    }
 }
