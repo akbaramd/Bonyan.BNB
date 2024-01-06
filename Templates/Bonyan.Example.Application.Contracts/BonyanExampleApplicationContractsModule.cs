@@ -14,7 +14,10 @@ public class BonyanExampleApplicationContractsModule : BnbModule
     {
         context.Services.AddAutoMapperObjectMapper<BonyanExampleApplicationContractsModule>();
 
-        Configure<AbpAutoMapperOptions>(options => { options.AddProfile<ProductMapper>(true); });
+        Configure<BnbAutoMapperOptions>(options =>
+        {
+            options.AddProfile<ProductMapper>(true);
+        });
         base.ConfigureServices(context);
     }
 }

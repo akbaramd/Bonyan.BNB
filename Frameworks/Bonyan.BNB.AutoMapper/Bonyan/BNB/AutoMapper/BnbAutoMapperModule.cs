@@ -15,7 +15,7 @@ public class BnbAutoMapperModule : BnbModule
 {
     public override void PreConfigureServices(BnbServiceConfigurationContext context)
     {
-        context.Services.AddConventionalRegistrar(new AbpAutoMapperConventionalRegistrar());
+        context.Services.AddConventionalRegistrar(new BnbAutoMapperConventionalRegistrar());
     }
 
     public override void ConfigureServices(BnbServiceConfigurationContext context)
@@ -24,26 +24,25 @@ public class BnbAutoMapperModule : BnbModule
 
         context.Services.AddSingleton<IConfigurationProvider>(sp =>
         {
-            using (var scope = sp.CreateScope())
+            using var scope = sp.CreateScope();
+            
+            var options = scope.ServiceProvider.GetRequiredService<IOptions<BnbAutoMapperOptions>>().Value;
+
+            var mapperConfigurationExpression = sp.GetRequiredService<IOptions<MapperConfigurationExpression>>().Value;
+            var autoMapperConfigurationContext = new BnbAutoMapperConfigurationContext(mapperConfigurationExpression, scope.ServiceProvider);
+
+            foreach (var configurator in options.Configurators)
             {
-                var options = scope.ServiceProvider.GetRequiredService<IOptions<AbpAutoMapperOptions>>().Value;
-
-                var mapperConfigurationExpression = sp.GetRequiredService<IOptions<MapperConfigurationExpression>>().Value;
-                var autoMapperConfigurationContext = new AbpAutoMapperConfigurationContext(mapperConfigurationExpression, scope.ServiceProvider);
-
-                foreach (var configurator in options.Configurators)
-                {
-                    configurator(autoMapperConfigurationContext);
-                }
-                var mapperConfiguration = new MapperConfiguration(mapperConfigurationExpression);
-
-                foreach (var profileType in options.ValidatingProfiles)
-                {
-                    mapperConfiguration.Internal().AssertConfigurationIsValid(((Profile)Activator.CreateInstance(profileType)).ProfileName);
-                }
-
-                return mapperConfiguration;
+                configurator(autoMapperConfigurationContext);
             }
+            var mapperConfiguration = new MapperConfiguration(mapperConfigurationExpression);
+
+            foreach (var profileType in options.ValidatingProfiles)
+            {
+                mapperConfiguration.Internal().AssertConfigurationIsValid(((Profile)Activator.CreateInstance(profileType)).ProfileName);
+            }
+            
+            return mapperConfiguration;
         });
 
         context.Services.AddTransient<IMapper>(sp => sp.GetRequiredService<IConfigurationProvider>().CreateMapper(sp.GetService));

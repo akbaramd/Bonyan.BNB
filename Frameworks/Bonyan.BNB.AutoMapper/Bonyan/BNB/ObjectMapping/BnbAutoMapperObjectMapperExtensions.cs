@@ -3,7 +3,7 @@ using Bonyan.BNB.AutoMapper;
 
 namespace Bonyan.BNB.ObjectMapping;
 
-public static class AbpAutoMapperObjectMapperExtensions
+public static class BnbAutoMapperObjectMapperExtensions
 {
     public static IMapper GetMapper(this IObjectMapper objectMapper)
     {

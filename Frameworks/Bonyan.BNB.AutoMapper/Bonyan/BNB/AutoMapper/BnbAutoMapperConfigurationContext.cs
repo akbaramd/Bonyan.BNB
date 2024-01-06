@@ -2,13 +2,13 @@
 
 namespace Bonyan.BNB.AutoMapper;
 
-public class AbpAutoMapperConfigurationContext : IAbpAutoMapperConfigurationContext
+public class BnbAutoMapperConfigurationContext : IBnbAutoMapperConfigurationContext
 {
     public IMapperConfigurationExpression MapperConfiguration { get; }
 
     public IServiceProvider ServiceProvider { get; }
 
-    public AbpAutoMapperConfigurationContext(
+    public BnbAutoMapperConfigurationContext(
         IMapperConfigurationExpression mapperConfigurationExpression,
         IServiceProvider serviceProvider)
     {

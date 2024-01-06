@@ -2,7 +2,7 @@
 
 namespace Bonyan.BNB.AutoMapper;
 
-public interface IAbpAutoMapperConfigurationContext
+public interface IBnbAutoMapperConfigurationContext
 {
     IMapperConfigurationExpression MapperConfiguration { get; }
 

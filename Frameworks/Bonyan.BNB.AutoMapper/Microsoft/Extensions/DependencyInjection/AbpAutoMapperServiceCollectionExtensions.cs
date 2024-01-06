@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
-public static class AbpAutoMapperServiceCollectionExtensions
+public static class BnbAutoMapperServiceCollectionExtensions
 {
     public static IServiceCollection AddAutoMapperObjectMapper(this IServiceCollection services)
     {

@@ -4,15 +4,15 @@ using Bonyan.Bnb.Extensions;
 
 namespace Bonyan.BNB.AutoMapper;
 
-public class AbpAutoMapperOptions
+public class BnbAutoMapperOptions
 {
-    public List<Action<IAbpAutoMapperConfigurationContext>> Configurators { get; }
+    public List<Action<IBnbAutoMapperConfigurationContext>> Configurators { get; }
 
     public ITypeList<Profile> ValidatingProfiles { get; set; }
 
-    public AbpAutoMapperOptions()
+    public BnbAutoMapperOptions()
     {
-        Configurators = new List<Action<IAbpAutoMapperConfigurationContext>>();
+        Configurators = new List<Action<IBnbAutoMapperConfigurationContext>>();
         ValidatingProfiles = new TypeList<Profile>();
     }
 

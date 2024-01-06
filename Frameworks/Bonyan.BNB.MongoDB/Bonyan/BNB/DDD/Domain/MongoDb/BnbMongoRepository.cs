@@ -10,26 +10,26 @@ public class BnbMongoRepository<TEntity, TKey>(IMongoDatabase mongoDatabase)
         IRepository<TEntity, TKey>
     where TEntity : IBnbEntity<TKey>
 {
-    public async Task<TEntity> InsertAsync(TEntity entity, CancellationToken cancellationToken = default)
+    public async Task<TEntity> InsertAsync(TEntity entity,bool autoSave = true, CancellationToken cancellationToken = default)
     {
         await Collection.InsertOneAsync(entity, cancellationToken: cancellationToken);
         return entity;
     }
 
-    public async Task<TEntity> UpdateAsync(TEntity entity, CancellationToken cancellationToken = default)
+    public async Task<TEntity> UpdateAsync(TEntity entity,bool autoSave = true, CancellationToken cancellationToken = default)
     {
         await Collection.ReplaceOneAsync(x=>x.Id != null && x.Id.Equals(entity.Id),entity, cancellationToken: cancellationToken);
         return entity;
     }
 
-    public async Task DeleteAsync(TEntity entity, CancellationToken cancellationToken = default)
+    public async Task DeleteAsync(TEntity entity,bool autoSave = true, CancellationToken cancellationToken = default)
     {
         await Collection.DeleteOneAsync(x=>x.Id != null && x.Id.Equals(entity.Id), cancellationToken: cancellationToken);
     }
 
-    public async Task DeleteAsync(TKey key, CancellationToken cancellationToken = default)
+    public async Task DeleteAsync(TKey key,bool autoSave = true, CancellationToken cancellationToken = default)
     {
         var entity = await GetByIdAsync(key, cancellationToken);
-        await DeleteAsync(entity, cancellationToken);
+        await DeleteAsync(entity,autoSave, cancellationToken);
     }
 }

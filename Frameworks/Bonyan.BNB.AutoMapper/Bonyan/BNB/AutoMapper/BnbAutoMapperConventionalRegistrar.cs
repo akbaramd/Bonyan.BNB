@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Bonyan.BNB.AutoMapper;
 
-public class AbpAutoMapperConventionalRegistrar : DefaultConventionalRegistrar
+public class BnbAutoMapperConventionalRegistrar : DefaultConventionalRegistrar
 {
     protected readonly Type[] OpenTypes = {
             typeof(IValueResolver<,,>),
