@@ -18,9 +18,7 @@
       <ProjectReference Include="..\Bonyan.BNB.Auditing\Bonyan.BNB.Auditing.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\Bonyan.BNB.Auditing\Bonyan.BNB.Auditing.csproj" />
-    </ItemGroup>
+
 
 
 </Project>

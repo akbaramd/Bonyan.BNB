@@ -17,5 +17,5 @@ public interface ISortedResultRequest
     /// "Name DESC"
     /// "Name ASC, Age DESC"
     /// </example>
-    string? Sorting { get; set; }
+    string? Sort { get; set; }
 }

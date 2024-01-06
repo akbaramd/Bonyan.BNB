@@ -1,30 +1,22 @@
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Bonyan.BNB.EntityFrameworkCore;
 
-public static class AbpDbContextConfigurationContextSqlServerExtensions
+public static class BnbDbContextConfigurationContextSqlServerExtensions
 {
     public static DbContextOptionsBuilder UseSqlServer(
-        [NotNull] this AbpDbContextConfigurationContext context,
+        [NotNull] this BnbDbContextConfigurationContext context,
+        string connectionString,
         Action<SqlServerDbContextOptionsBuilder>? sqlServerOptionsAction = null)
     {
-        if (context.ExistingConnection != null)
+        return context.DbContextOptions.UseSqlServer(connectionString, optionsBuilder =>
         {
-            return context.DbContextOptions.UseSqlServer(context.ExistingConnection, optionsBuilder =>
-            {
-                optionsBuilder.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
-                sqlServerOptionsAction?.Invoke(optionsBuilder);
-            });
-        }
-        else
-        {
-            return context.DbContextOptions.UseSqlServer(context.ConnectionString, optionsBuilder =>
-            {
-                optionsBuilder.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
-                sqlServerOptionsAction?.Invoke(optionsBuilder);
-            });
-        }
+            optionsBuilder.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
+            sqlServerOptionsAction?.Invoke(optionsBuilder);
+        });
     }
+    
+    
 }

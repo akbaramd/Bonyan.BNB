@@ -9,6 +9,7 @@
     <ItemGroup>
       <ProjectReference Include="..\..\Frameworks\Bonyan.BNB.DDD.Application\Bonyan.BNB.DDD.Application.csproj" />
       <ProjectReference Include="..\..\Frameworks\Bonyan.BNB\Bonyan.BNB.csproj" />
+      <ProjectReference Include="..\..\Modules\Identity\Bonyan.BNB.Identity.Application\Bonyan.BNB.Identity.Application.csproj" />
       <ProjectReference Include="..\Bonyan.Example.Application.Contracts\Bonyan.Example.Application.Contracts.csproj" />
       <ProjectReference Include="..\Bonyan.Example.Domain\Bonyan.Example.Domain.csproj" />
     </ItemGroup>

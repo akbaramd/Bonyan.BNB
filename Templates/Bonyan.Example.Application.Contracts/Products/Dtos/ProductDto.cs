@@ -7,6 +7,6 @@ public class ProductDto : EntityDto<Guid>
 {
     public string Title { get; set; } = string.Empty;
     public string Summery { get; set; } = string.Empty;
-    public string Price { get; set; }
+    public decimal Price { get; set; }
     public ProductState State { get; set; }
 }

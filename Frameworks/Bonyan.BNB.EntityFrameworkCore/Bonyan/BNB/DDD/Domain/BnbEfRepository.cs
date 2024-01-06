@@ -10,7 +10,7 @@ public class BnbEfRepository<TDbContext,TEntity, TKey>
         IEfRepository<TEntity, TKey>,
         IRepository<TEntity, TKey>
     where TEntity :class, IBnbEntity<TKey> 
-    where TDbContext : BnbDbContext
+    where TDbContext : BnbDbContext<TDbContext>
 {
     
     public BnbEfRepository(DbContext dbContext) : base(dbContext)

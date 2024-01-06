@@ -1,14 +1,21 @@
+using Bonyan.BNB.DDD.Domain;
+using Bonyan.BNB.DDD.Domain.Entities;
+using Bonyan.BNB.DDD.Domain.Repository;
+using Bonyan.Bnb.Exceptions;
 using Bonyan.Bnb.Extensions;
 using Bonyan.Bnb.Statics;
 using JetBrains.Annotations;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace Bonyan.BNB.EntityFrameworkCore;
 
 public class BnbDbContextOptions
 {
-    internal List<Action<AbpDbContextConfigurationContext>> DefaultPreConfigureActions { get; }
+    internal List<Action<BnbDbContextConfigurationContext>> DefaultPreConfigureActions { get; }
 
-    internal Action<AbpDbContextConfigurationContext>? DefaultConfigureAction { get; set; }
+    internal Action<BnbDbContextConfigurationContext>? DefaultConfigureAction { get; set; }
 
     internal Dictionary<Type, List<object>> PreConfigureActions { get; }
 
@@ -17,19 +24,19 @@ public class BnbDbContextOptions
 
     public BnbDbContextOptions()
     {
-        DefaultPreConfigureActions = new List<Action<AbpDbContextConfigurationContext>>();
+        DefaultPreConfigureActions = new List<Action<BnbDbContextConfigurationContext>>();
         PreConfigureActions = new Dictionary<Type, List<object>>();
         ConfigureActions = new Dictionary<Type, object>();
     }
 
-    public void PreConfigure( Action<AbpDbContextConfigurationContext> action)
+    public void PreConfigure([NotNull] Action<BnbDbContextConfigurationContext> action)
     {
         BnbCheck.NotNull(action, nameof(action));
 
         DefaultPreConfigureActions.Add(action);
     }
 
-    public void Configure([NotNull] Action<AbpDbContextConfigurationContext> action)
+    public void Configure([NotNull] Action<BnbDbContextConfigurationContext> action)
     {
         BnbCheck.NotNull(action, nameof(action));
 
@@ -41,8 +48,8 @@ public class BnbDbContextOptions
         return DefaultConfigureAction != null;
     }
 
-    public void PreConfigure<TDbContext>([NotNull] Action<AbpDbContextConfigurationContext<TDbContext>> action)
-        where TDbContext : BnbDbContext
+    public void PreConfigure<TDbContext>([NotNull] Action<BnbDbContextConfigurationContext<TDbContext>> action)
+        where TDbContext : BnbDbContext<TDbContext>
     {
         BnbCheck.NotNull(action, nameof(action));
 
@@ -55,8 +62,8 @@ public class BnbDbContextOptions
         actions.Add(action);
     }
 
-    public void Configure<TDbContext>([NotNull] Action<AbpDbContextConfigurationContext<TDbContext>> action)
-        where TDbContext : BnbDbContext
+    public void Configure<TDbContext>([NotNull] Action<BnbDbContextConfigurationContext<TDbContext>> action)
+        where TDbContext : BnbDbContext<TDbContext>
     {
         BnbCheck.NotNull(action, nameof(action));
 

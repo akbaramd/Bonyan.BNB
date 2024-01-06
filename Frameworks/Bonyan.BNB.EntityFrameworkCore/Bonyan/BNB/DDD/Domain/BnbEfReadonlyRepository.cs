@@ -11,7 +11,7 @@ namespace Bonyan.BNB.DDD.Domain;
 public class BnbEfReadonlyRepository<TDbContext,TEntity,TKey> :
     IReadOnlyRepository<TEntity,TKey>,
     IEfReadonlyRepository<TEntity,TKey> 
-    where TDbContext : BnbDbContext
+    where TDbContext : BnbDbContext<TDbContext>
     where TEntity : class, IBnbEntity<TKey>
 {
     public BnbEfReadonlyRepository(DbContext dbContext)

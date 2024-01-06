@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+
+    <Import Project="..\..\..\module.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PackageId>Bonyan.BNB.Identity.Application</PackageId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\Frameworks\Bonyan.BNB.DDD.Application\Bonyan.BNB.DDD.Application.csproj" />
+        <ProjectReference Include="..\..\..\Frameworks\Bonyan.BNB\Bonyan.BNB.csproj" />
+        <ProjectReference Include="..\Bonyan.BNB.Identity.Application.Contracts\Bonyan.BNB.Identity.Application.Contracts.csproj" />
+    </ItemGroup>
+
+</Project>
+
+
+

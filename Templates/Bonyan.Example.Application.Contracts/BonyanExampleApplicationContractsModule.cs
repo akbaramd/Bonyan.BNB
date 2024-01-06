@@ -1,13 +1,16 @@
 ﻿using Bonyan.Bnb.Attributes;
 using Bonyan.BNB.AutoMapper;
 using Bonyan.BNB.DDD.Application;
+using Bonyan.BNB.Identity.Application.Contracts;
 using Bonyan.Bnb.Modularity;
 using Bonyan.Example.Application.Contracts.Products;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Bonyan.Example.Application.Contracts;
 
-[DependsOnModules(typeof(BnbDddApplicationContractsModule),typeof(BnbAutoMapperModule))]
+[DependsOnModules(
+    typeof(BnbIdentityApplicationContractsModule),
+    typeof(BnbDddApplicationContractsModule),typeof(BnbAutoMapperModule))]
 public class BonyanExampleApplicationContractsModule : BnbModule
 {
     public override void ConfigureServices(BnbServiceConfigurationContext context)

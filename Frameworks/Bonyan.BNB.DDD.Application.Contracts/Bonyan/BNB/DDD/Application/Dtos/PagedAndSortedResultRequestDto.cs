@@ -6,5 +6,5 @@ namespace Bonyan.BNB.DDD.Application.Dtos;
 [Serializable]
 public class PagedAndSortedResultRequestDto : PagedResultRequestDto, IPagedAndSortedResultRequest
 {
-    public virtual string? Sorting { get; set; }
+    public virtual string? Sort { get; set; }
 }

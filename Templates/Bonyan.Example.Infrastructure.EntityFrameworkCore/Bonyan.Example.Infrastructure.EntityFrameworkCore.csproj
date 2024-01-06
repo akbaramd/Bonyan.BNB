@@ -9,7 +9,15 @@
     <ItemGroup>
       <ProjectReference Include="..\..\Frameworks\Bonyan.BNB.EntityFrameworkCore.SqlServer\Bonyan.BNB.EntityFrameworkCore.SqlServer.csproj" />
       <ProjectReference Include="..\..\Frameworks\Bonyan.BNB.EntityFrameworkCore\Bonyan.BNB.EntityFrameworkCore.csproj" />
+      <ProjectReference Include="..\..\Modules\Identity\Bonyan.BNB.Identity.EntityFrameworkCore\Bonyan.BNB.Identity.EntityFrameworkCore.csproj" />
       <ProjectReference Include="..\Bonyan.Example.Domain\Bonyan.Example.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
     </ItemGroup>
 
 </Project>

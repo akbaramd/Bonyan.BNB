@@ -5,17 +5,20 @@ using Bonyan.Bnb.DependencyInjection;
 namespace Bonyan.BNB.DDD.Application;
 
 public class CrudAppService<TEntity,TResultDto, TKey> :
-    AbstractKeyCrudAppService<TEntity, TResultDto, TKey> 
+    CrudAppService<TEntity, TResultDto, TKey,PagedAndSortedResultRequestDto> 
     where TEntity : IBnbEntity<TKey>
     where TResultDto : IEntityDto<TKey>
 {
     public CrudAppService(IBnbLazyServiceProvider lazyServiceProvider) : base(lazyServiceProvider)
     {
     }
+
+
+   
 }
 
 public class CrudAppService<TEntity,TResultDto, TKey, TListQueryDto> :
-    AbstractKeyCrudAppService<TEntity, TResultDto, TKey,TListQueryDto> 
+    CrudAppService<TEntity, TResultDto,TResultDto, TKey,TListQueryDto,TResultDto> 
     where TEntity : IBnbEntity<TKey>
     where TResultDto : IEntityDto<TKey>
 {
@@ -24,7 +27,7 @@ public class CrudAppService<TEntity,TResultDto, TKey, TListQueryDto> :
     }
 }
 public class CrudAppService<TEntity,TResultDto,TResultListDto, TKey, TListQueryDto,TCreateAndUpdateDto> :
-    AbstractKeyCrudAppService<TEntity, TResultDto,TResultListDto, TKey,TListQueryDto,TCreateAndUpdateDto> 
+    CrudAppService<TEntity, TResultDto,TResultListDto, TKey,TListQueryDto,TCreateAndUpdateDto,TCreateAndUpdateDto> 
     where TEntity : IBnbEntity<TKey>
     where TResultDto : IEntityDto<TKey>
     where TResultListDto : IEntityDto<TKey>
@@ -41,5 +44,10 @@ public class CrudAppService<TEntity,TResultDto,TResultListDto, TKey, TListQueryD
 {
     public CrudAppService(IBnbLazyServiceProvider lazyServiceProvider) : base(lazyServiceProvider)
     {
+    }
+    
+    protected override Task<TEntity> GetEntityByIdAsync(TKey id)
+    {
+        return Repository.GetByIdAsync(id);
     }
 }

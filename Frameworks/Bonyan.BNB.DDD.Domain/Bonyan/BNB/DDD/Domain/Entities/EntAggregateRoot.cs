@@ -6,7 +6,7 @@ namespace Bonyan.BNB.DDD.Domain.Entities;
 public abstract class AggregateRoot : BasicAggregateRoot,
     IHasConcurrencyStamp
 {
-     public virtual BnbExtraPropertyDictionary ExtraProperties { get; protected set; }
+     // public virtual BnbExtraPropertyDictionary ExtraProperties { get; protected set; }
 
     [DisableAuditing]
     public virtual string ConcurrencyStamp { get; set; }
@@ -29,10 +29,10 @@ public abstract class AggregateRoot : BasicAggregateRoot,
 
 [Serializable]
 public abstract class AggregateRoot<TKey> : BasicAggregateRoot<TKey>,
-     IHasExtraProperties,
+     // IHasExtraProperties,
     IHasConcurrencyStamp
 {
-    public virtual BnbExtraPropertyDictionary ExtraProperties { get; protected set; }
+    // public virtual BnbExtraPropertyDictionary ExtraProperties { get; protected set; }
 
     [DisableAuditing]
     public virtual string ConcurrencyStamp { get; set; }
@@ -40,7 +40,7 @@ public abstract class AggregateRoot<TKey> : BasicAggregateRoot<TKey>,
     protected AggregateRoot()
     {
         ConcurrencyStamp = Guid.NewGuid().ToString("N");
-         ExtraProperties = new BnbExtraPropertyDictionary();
+         // ExtraProperties = new BnbExtraPropertyDictionary();
          //this.SetDefaultsForExtraProperties();
     }
 
@@ -48,7 +48,7 @@ public abstract class AggregateRoot<TKey> : BasicAggregateRoot<TKey>,
         : base(id)
     {
         ConcurrencyStamp = Guid.NewGuid().ToString("N");
-         ExtraProperties = new BnbExtraPropertyDictionary();
+         // ExtraProperties = new BnbExtraPropertyDictionary();
          //this.SetDefaultsForExtraProperties();
     }
 

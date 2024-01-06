@@ -4,7 +4,6 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        <InvariantGlobalization>true</InvariantGlobalization>
     </PropertyGroup>
 
     <ItemGroup>
@@ -13,9 +12,12 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Frameworks\Bonyan.BNB.AspNetCore.Mvc\Bonyan.BNB.AspNetCore.Mvc.csproj" />
       <ProjectReference Include="..\..\Frameworks\Bonyan.BNB.AspNetCore\Bonyan.BNB.AspNetCore.csproj" />
       <ProjectReference Include="..\..\Frameworks\Bonyan.BNB\Bonyan.BNB.csproj" />
+      <ProjectReference Include="..\..\Modules\Identity\Bonyan.BNB.Identity.Api\Bonyan.BNB.Identity.Api.csproj" />
       <ProjectReference Include="..\Bonyan.Example.Application\Bonyan.Example.Application.csproj" />
+      <ProjectReference Include="..\Bonyan.Example.Infrastructure.EntityFrameworkCore\Bonyan.Example.Infrastructure.EntityFrameworkCore.csproj" />
       <ProjectReference Include="..\Bonyan.Example.Infrastructure.Mongo\Bonyan.Example.Infrastructure.Mongo.csproj" />
     </ItemGroup>
 
