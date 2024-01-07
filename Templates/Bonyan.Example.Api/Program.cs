@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
- var res = await builder.AddApplicationAsync<BonyanExampleApiModule>();
+ var res = await builder.AddApplicationAsync<ApiModule>();
 
 var app = builder.Build();
 

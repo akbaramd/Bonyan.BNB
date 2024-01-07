@@ -1,13 +1,6 @@
-using Bonyan.BNB.DDD.Domain;
-using Bonyan.BNB.DDD.Domain.Entities;
-using Bonyan.BNB.DDD.Domain.Repository;
-using Bonyan.Bnb.Exceptions;
 using Bonyan.Bnb.Extensions;
 using Bonyan.Bnb.Statics;
 using JetBrains.Annotations;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace Bonyan.BNB.EntityFrameworkCore;
 

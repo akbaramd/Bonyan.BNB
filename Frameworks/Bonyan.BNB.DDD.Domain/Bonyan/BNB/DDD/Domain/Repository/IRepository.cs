@@ -1,5 +1,4 @@
-﻿using System.Linq.Expressions;
-using Bonyan.BNB.DDD.Domain.Entities;
+﻿using Bonyan.BNB.DDD.Domain.Entities;
 
 namespace Bonyan.BNB.DDD.Domain.Repository;
 

@@ -5,10 +5,6 @@ using Bonyan.BNB.Identity.Application.Contracts.Users.Dtos;
 
 namespace Bonyan.BNB.Identity.Api.Controllers;
 
-
-public  class UserController : BnbCrudController<IUserAppService,UserDto,UserDto,Guid,PagedAndSortedResultRequestDto,UserCreateDto,UserUpdateDto>
-{
-    public UserController(IUserAppService service) : base(service)
-    {
-    }
-}
+public abstract class BnbUserController(IUserAppService service)
+    : BnbCrudController<IUserAppService, UserDto, UserDto, Guid, PagedAndSortedResultRequestDto, UserCreateDto,
+        UserUpdateDto>(service);

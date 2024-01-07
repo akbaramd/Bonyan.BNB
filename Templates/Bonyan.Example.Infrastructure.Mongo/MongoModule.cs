@@ -1,15 +1,16 @@
 ﻿using Bonyan.Bnb.Attributes;
 using Bonyan.Bnb.Modularity;
+using Bonyan.BNB.MongoDb;
 using Bonyan.Example.Domain;
-using Bonyan.Example.Domain.Aggregates.Products;
-using Bonyan.Example.Infrastructure.Mongo.Repositories;
-using Bonyan.Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Bonyan.Example.Infrastructure.Mongo;
 
-[DependsOnModules(typeof(BonyanExampleDomainModule))]
-public class BonyanExampleMongoModule : BnbModule
+[DependsOnModules(
+    typeof(BnbMongoModule),
+    typeof(DomainModule)
+    )]
+public class MongoModule : BnbModule
 {
     public override void ConfigureServices(BnbServiceConfigurationContext context)
     {
@@ -19,7 +20,7 @@ public class BonyanExampleMongoModule : BnbModule
             c.Database = "ExampleDB";
         });
 
-        context.Services.AddDefaultRepository(typeof(Product),typeof(ProductRepository));
+        // context.Services.AddDefaultRepository(typeof(Product),typeof(ProductRepository));
         base.ConfigureServices(context);
     }
 }

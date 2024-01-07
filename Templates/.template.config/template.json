@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Akbar Ahmadi Saray",
+  "classifications": [ "NetCore", "CleanArchitecture" ],
+  "identity": "BonyanExample",
+  "name": "Bonyan Template",
+  "shortName": "bonyan",
+  "sourceName":"Bonyan.Example",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}

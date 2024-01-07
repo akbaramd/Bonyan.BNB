@@ -1,5 +1,4 @@
-﻿using Bonyan.BNB.DDD.Domain.Repository;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace Bonyan.BNB.MongoDb;
 

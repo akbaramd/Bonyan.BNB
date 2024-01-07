@@ -1,4 +1,3 @@
-using Bonyan.BNB.Identity.Domain.Roles;
 using Bonyan.BNB.Identity.Domain.Users;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

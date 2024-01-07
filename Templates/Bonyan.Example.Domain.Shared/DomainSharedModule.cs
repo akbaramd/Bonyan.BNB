@@ -2,7 +2,7 @@
 
 namespace Bonyan.Example.Domain.Shared;
 
-public class BonyanExampleDomainSharedModule : BnbModule
+public class DomainSharedModule : BnbModule
 {
     
 }

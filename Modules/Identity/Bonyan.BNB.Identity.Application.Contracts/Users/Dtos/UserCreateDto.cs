@@ -1,6 +1,4 @@
-﻿using Bonyan.BNB.DDD.Application.Dtos;
-
-namespace Bonyan.BNB.Identity.Application.Contracts.Users.Dtos;
+﻿namespace Bonyan.BNB.Identity.Application.Contracts.Users.Dtos;
 
 public class UserCreateDto 
 {

@@ -1,6 +1,4 @@
-using Bonyan.BNB.DDD.Domain.Repository;
 using Bonyan.Bnb.Modularity;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Bonyan.BNB.DDD.Domain;
 

@@ -1,7 +1,5 @@
 ﻿using Bonyan.Bnb.Attributes;
-using Bonyan.BNB.DDD.Application;
 using Bonyan.BNB.Identity.Application.Contracts;
-using Bonyan.BNB.Identity.Application.Contracts.Users;
 using Bonyan.Bnb.Modularity;
 
 namespace Bonyan.BNB.Identity.Api;

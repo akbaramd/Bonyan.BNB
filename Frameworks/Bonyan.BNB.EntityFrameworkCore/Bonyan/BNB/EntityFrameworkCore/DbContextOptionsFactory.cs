@@ -1,7 +1,6 @@
 ﻿using Bonyan.Bnb.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 
 namespace Bonyan.BNB.EntityFrameworkCore;
 

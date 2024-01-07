@@ -7,8 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Frameworks\Bonyan.BNB.AutoMapper\Bonyan.BNB.AutoMapper.csproj" />
-      <ProjectReference Include="..\..\Frameworks\Bonyan.BNB.DDD.Application.Contracts\Bonyan.BNB.DDD.Application.Contracts.csproj" />
       <ProjectReference Include="..\..\Modules\Identity\Bonyan.BNB.Identity.Application.Contracts\Bonyan.BNB.Identity.Application.Contracts.csproj" />
       <ProjectReference Include="..\Bonyan.Example.Domain.Shared\Bonyan.Example.Domain.Shared.csproj" />
       <ProjectReference Include="..\Bonyan.Example.Domain\Bonyan.Example.Domain.csproj" />

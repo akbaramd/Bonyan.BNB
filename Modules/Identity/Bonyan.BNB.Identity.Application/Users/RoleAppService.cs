@@ -3,10 +3,7 @@ using Bonyan.BNB.DDD.Application.Dtos;
 using Bonyan.Bnb.DependencyInjection;
 using Bonyan.BNB.Identity.Application.Contracts.Roles;
 using Bonyan.BNB.Identity.Application.Contracts.Roles.Dtos;
-using Bonyan.BNB.Identity.Application.Contracts.Users;
-using Bonyan.BNB.Identity.Application.Contracts.Users.Dtos;
 using Bonyan.BNB.Identity.Domain.Roles;
-using Bonyan.BNB.Identity.Domain.Users;
 
 namespace Bonyan.BNB.Identity.Application.Users;
 

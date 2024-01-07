@@ -1,25 +1,24 @@
 ﻿using Bonyan.Bnb.Attributes;
 using Bonyan.BNB.AutoMapper;
-using Bonyan.BNB.DDD.Application;
 using Bonyan.BNB.Identity.Application.Contracts;
 using Bonyan.Bnb.Modularity;
-using Bonyan.Example.Application.Contracts.Products;
+using Bonyan.Example.Domain.Shared;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Bonyan.Example.Application.Contracts;
 
 [DependsOnModules(
-    typeof(BnbIdentityApplicationContractsModule),
-    typeof(BnbDddApplicationContractsModule),typeof(BnbAutoMapperModule))]
-public class BonyanExampleApplicationContractsModule : BnbModule
+    typeof(BnbIdentityApplicationContractsModule)
+    ,typeof(DomainSharedModule))]
+public class ApplicationContractsModule : BnbModule
 {
     public override void ConfigureServices(BnbServiceConfigurationContext context)
     {
-        context.Services.AddAutoMapperObjectMapper<BonyanExampleApplicationContractsModule>();
+        context.Services.AddAutoMapperObjectMapper<ApplicationContractsModule>();
 
         Configure<BnbAutoMapperOptions>(options =>
         {
-            options.AddProfile<ProductMapper>(true);
+            // options.AddProfile<ProductMapper>(true);
         });
         base.ConfigureServices(context);
     }

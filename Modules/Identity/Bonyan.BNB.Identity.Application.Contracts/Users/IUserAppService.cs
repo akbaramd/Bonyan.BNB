@@ -2,7 +2,6 @@
 using Bonyan.BNB.DDD.Application.Services;
 using Bonyan.Bnb.DependencyInjection;
 using Bonyan.BNB.Identity.Application.Contracts.Users.Dtos;
-using Bonyan.BNB.Identity.Domain.Users;
 
 namespace Bonyan.BNB.Identity.Application.Contracts.Users;
 

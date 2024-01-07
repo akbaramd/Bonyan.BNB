@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
-using Bonyan.BNB.EntityFrameworkCore;
+﻿using Bonyan.BNB.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
 
