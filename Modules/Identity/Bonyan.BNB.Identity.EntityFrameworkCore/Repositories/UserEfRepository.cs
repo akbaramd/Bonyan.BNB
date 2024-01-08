@@ -4,7 +4,7 @@ using Bonyan.BNB.Identity.Domain.Users;
 
 namespace Bonyan.BNB.Identity.EntityFrameworkCore.Repositories;
 
-public class UserRepository<TDbContext>(TDbContext dbContext) : BnbEfRepository<TDbContext,User,Guid>(dbContext), IUserRepository where TDbContext : BnbDbContext<TDbContext>
+public class IdentityUserRepository<TDbContext>(TDbContext dbContext) : BnbEfRepository<TDbContext,IdentityUser,Guid>(dbContext), IIdentityUserRepository where TDbContext : BnbDbContext<TDbContext>
 {
     
 }

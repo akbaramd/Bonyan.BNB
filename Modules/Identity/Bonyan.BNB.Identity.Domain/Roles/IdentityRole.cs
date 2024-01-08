@@ -3,11 +3,11 @@ using Bonyan.BNB.Identity.Domain.Users;
 
 namespace Bonyan.BNB.Identity.Domain.Roles;
 
-public class Role : BnbEntity<Guid>
+public class IdentityRole : BnbEntity<Guid>
 {
     public string Title { get; set; }   
     public string Name { get; set; }  
     
     
-    public ICollection<User> Users { get; set; }
+    public ICollection<IdentityUser> Users { get; set; }
 }

@@ -6,14 +6,16 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\..\Modules\Identity\Bonyan.BNB.Identity.Application.Contracts\Bonyan.BNB.Identity.Application.Contracts.csproj" />
-      <ProjectReference Include="..\Bonyan.Example.Domain.Shared\Bonyan.Example.Domain.Shared.csproj" />
-      <ProjectReference Include="..\Bonyan.Example.Domain\Bonyan.Example.Domain.csproj" />
-    </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+      <PackageReference Include="Bonyan.BNB" Version="1.0.4" />
+      <PackageReference Include="Bonyan.BNB.Identity.Application.Contracts" Version="1.0.4" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <ProjectReference Include="..\Bonyan.Example.Domain.Shared\Bonyan.Example.Domain.Shared.csproj" />
     </ItemGroup>
 
 </Project>

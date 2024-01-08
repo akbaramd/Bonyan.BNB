@@ -1,5 +1,6 @@
 ﻿using Bonyan.BNB.DDD.Application.Dtos;
 using Bonyan.BNB.DDD.Application.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bonyan.BNB.AspNetCore.Mvc;
@@ -64,6 +65,7 @@ public class BnbCrudController<TService,TResultDto, TListResultDto, TKey,  TList
 
 
     [HttpGet]
+    [Authorize]
     // GET
     public async Task<PagedResultDto<TListResultDto>> Get([FromQuery]  TListQueryDto requestDto)
     {
@@ -72,23 +74,27 @@ public class BnbCrudController<TService,TResultDto, TListResultDto, TKey,  TList
     
     
     [HttpPost]
+    [Authorize]
     public async Task<TResultDto> Create([FromBody] TCreateDto createDto)
     {
         return await AppService.CreateAsync(createDto);
     }
     
     [HttpGet("{id}")]
+    [Authorize]
     public async Task<TResultDto> Get(TKey id)
     {
         return await AppService.GetAsync(id);
     }
     
     [HttpPut("{id}")]
+    [Authorize]
     public async Task<TResultDto> Put(TKey id,[FromBody] TUpdateDto dto)
     {
         return await AppService.UpdateAsync(id,dto);
     }
     [HttpDelete("{id}")]
+    [Authorize]
     public async Task Delete(TKey id)
     {
         await AppService.DeleteAsync(id);

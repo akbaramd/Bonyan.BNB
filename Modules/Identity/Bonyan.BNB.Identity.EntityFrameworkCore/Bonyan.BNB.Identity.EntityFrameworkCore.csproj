@@ -8,12 +8,12 @@
         <Nullable>enable</Nullable>
         <PackageId>Bonyan.BNB.Identity.EntityFrameworkCore</PackageId>
     </PropertyGroup>
-
-
+    
     <ItemGroup>
       <ProjectReference Include="..\..\..\Frameworks\Bonyan.BNB.EntityFrameworkCore\Bonyan.BNB.EntityFrameworkCore.csproj" />
       <ProjectReference Include="..\..\..\Frameworks\Bonyan.BNB\Bonyan.BNB.csproj" />
       <ProjectReference Include="..\Bonyan.BNB.Identity.Domain\Bonyan.BNB.Identity.Domain.csproj" />
+      <ProjectReference Include="..\Bonyan.Bnb.Identity\Bonyan.Bnb.Identity.csproj" />
     </ItemGroup>
 
 </Project>

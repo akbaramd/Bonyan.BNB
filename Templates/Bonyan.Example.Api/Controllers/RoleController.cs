@@ -6,4 +6,4 @@ namespace Bonyan.Example.Api.Controllers;
 
 [Route("/api/role")]
 
-public class RoleController(IRoleAppService service) : BnbRoleController(service);
+public class RoleController(IIdentityRoleAppService service) : BnbRoleController(service);

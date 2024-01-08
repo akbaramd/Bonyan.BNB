@@ -7,15 +7,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Bonyan.BNB" Version="1.0.4" />
+        <PackageReference Include="Bonyan.BNB.Identity.Api" Version="1.0.4" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0"/>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Frameworks\Bonyan.BNB.AspNetCore.Mvc\Bonyan.BNB.AspNetCore.Mvc.csproj" />
-      <ProjectReference Include="..\..\Frameworks\Bonyan.BNB.AspNetCore\Bonyan.BNB.AspNetCore.csproj" />
-      <ProjectReference Include="..\..\Frameworks\Bonyan.BNB\Bonyan.BNB.csproj" />
-      <ProjectReference Include="..\..\Modules\Identity\Bonyan.BNB.Identity.Api\Bonyan.BNB.Identity.Api.csproj" />
       <ProjectReference Include="..\Bonyan.Example.Application\Bonyan.Example.Application.csproj" />
       <ProjectReference Include="..\Bonyan.Example.Infrastructure.EntityFrameworkCore\Bonyan.Example.Infrastructure.EntityFrameworkCore.csproj" />
       <ProjectReference Include="..\Bonyan.Example.Infrastructure.Mongo\Bonyan.Example.Infrastructure.Mongo.csproj" />

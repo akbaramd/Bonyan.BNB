@@ -15,11 +15,11 @@ public static class Extensions
 
     {
         services.AddBnbDbContext<TDbContext>(optionsBuilder);
-        services.AddDefaultRepository(typeof(User),typeof(UserRepository<TDbContext>));
-        services.AddDefaultRepository(typeof(Role),typeof(RoleRepository<TDbContext>));
+        services.AddDefaultRepository(typeof(IdentityUser),typeof(IdentityUserRepository<TDbContext>));
+        services.AddDefaultRepository(typeof(IdentityRole),typeof(IdentityRoleRepository<TDbContext>));
 
-        services.AddScoped<IUserRepository, UserRepository<TDbContext>>();
-        services.AddScoped<IRoleRepository, RoleRepository<TDbContext>>();
+        services.AddScoped<IIdentityUserRepository, IdentityUserRepository<TDbContext>>();
+        services.AddScoped<IIdentityRoleRepository, IdentityRoleRepository<TDbContext>>();
         
         return services;
     }

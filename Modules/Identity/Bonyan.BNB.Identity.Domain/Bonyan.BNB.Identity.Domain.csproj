@@ -12,6 +12,9 @@
     <ItemGroup>
       <ProjectReference Include="..\..\..\Frameworks\Bonyan.BNB.DDD.Domain\Bonyan.BNB.DDD.Domain.csproj" />
       <ProjectReference Include="..\..\..\Frameworks\Bonyan.BNB\Bonyan.BNB.csproj" />
+        <ProjectReference Include="..\Bonyan.Bnb.Identity\Bonyan.Bnb.Identity.csproj" />
+        <ProjectReference Include="..\Bonyan.Bnb.Identity\Bonyan.Bnb.Identity.csproj" />
+        <ProjectReference Include="..\Bonyan.Bnb.Identity\Bonyan.Bnb.Identity.csproj" />
     </ItemGroup>
 
 </Project>

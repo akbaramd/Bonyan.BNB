@@ -1,6 +1,8 @@
-﻿namespace Bonyan.BNB.Identity.Application.Contracts.Users.Dtos;
+﻿using Bonyan.BNB.DDD.Application.Dtos;
 
-public class UserUpdateDto 
+namespace Bonyan.BNB.Identity.Application.Contracts.Users.Dtos;
+
+public class IdentityUserDto : FullAuditedEntityDto<Guid>
 {
     public string UserName { get; set; }
     public string Email { get; set; }

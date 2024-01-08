@@ -7,7 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Frameworks\Bonyan.BNB\Bonyan.BNB.csproj" />
+      <PackageReference Include="Bonyan.BNB" Version="1.0.4" />
     </ItemGroup>
+
 
 </Project>

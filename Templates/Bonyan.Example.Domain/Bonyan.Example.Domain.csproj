@@ -7,13 +7,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Frameworks\Bonyan.BNB\Bonyan.BNB.csproj" />
-      <ProjectReference Include="..\..\Modules\Identity\Bonyan.BNB.Identity.Domain\Bonyan.BNB.Identity.Domain.csproj" />
       <ProjectReference Include="..\Bonyan.Example.Domain.Shared\Bonyan.Example.Domain.Shared.csproj" />
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="Aggregates\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Bonyan.BNB" Version="1.0.4" />
+      <PackageReference Include="Bonyan.BNB.Identity.Domain" Version="1.0.4" />
     </ItemGroup>
 
 </Project>

@@ -30,7 +30,7 @@ function Publish-DotnetProject {
     # Upload the .nupkg file to NuGet
     if ($nupkgFile -ne $null) {
         $nugetSource = 'https://api.nuget.org/v3/index.json'
-        $nugetApiKey = 'oy2mtk4l4gzubk3v4yrqqz66drxaxmfeziel7rlg22cjsi'
+        $nugetApiKey = 'oy2ltwbocqxifhr3c2lay43mvyta3x7uvnc4clhkfhrpla'
 
         # Use NuGet API or command line to upload the package
         $nugetPushCommand = "nuget push `"$($nupkgFile.FullName)`" -Source $nugetSource -ApiKey $nugetApiKey"

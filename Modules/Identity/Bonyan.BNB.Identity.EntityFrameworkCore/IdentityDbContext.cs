@@ -12,13 +12,13 @@ public class IdentityDbContext<TDbContext> : BnbDbContext<TDbContext> where TDbC
     {
     }
 
-    public DbSet<User> Users { get; set; }
-    public DbSet<Role> Roles { get; set; }
+    public DbSet<IdentityUser> Users { get; set; }
+    public DbSet<IdentityRole> Roles { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfiguration<User>(new UserConfiguration());
-        modelBuilder.ApplyConfiguration<Role>(new RoleConfiguration());
+        modelBuilder.ApplyConfiguration<IdentityUser>(new UserConfiguration());
+        modelBuilder.ApplyConfiguration<IdentityRole>(new RoleConfiguration());
         base.OnModelCreating(modelBuilder);
     }
 }

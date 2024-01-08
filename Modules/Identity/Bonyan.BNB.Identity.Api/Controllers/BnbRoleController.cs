@@ -5,6 +5,6 @@ using Bonyan.BNB.Identity.Application.Contracts.Roles.Dtos;
 
 namespace Bonyan.BNB.Identity.Api.Controllers;
 
-public abstract class BnbRoleController(IRoleAppService service)
-    : BnbCrudController<IRoleAppService, RoleDto, RoleDto, Guid, PagedAndSortedResultRequestDto, RoleCreateDto,
-        RoleUpdateDto>(service);
+public abstract class BnbRoleController(IIdentityRoleAppService service)
+    : BnbCrudController<IIdentityRoleAppService, IdentityRoleDto, IdentityRoleDto, Guid, PagedAndSortedResultRequestDto, IdentityRoleCreateDto,
+        IdentityRoleUpdateDto>(service);

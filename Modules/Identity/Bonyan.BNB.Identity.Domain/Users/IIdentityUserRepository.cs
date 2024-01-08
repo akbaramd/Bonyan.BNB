@@ -2,7 +2,7 @@
 
 namespace Bonyan.BNB.Identity.Domain.Users;
 
-public interface IUserRepository : IRepository<User,Guid>
+public interface IIdentityUserRepository : IRepository<IdentityUser,Guid>
 {
     
 }

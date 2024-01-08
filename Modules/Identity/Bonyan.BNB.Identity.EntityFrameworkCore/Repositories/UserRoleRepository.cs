@@ -4,7 +4,7 @@ using Bonyan.BNB.Identity.Domain.Roles;
 
 namespace Bonyan.BNB.Identity.EntityFrameworkCore.Repositories;
 
-public class RoleRepository<TDbContext>(TDbContext dbContext) : BnbEfRepository<TDbContext,Role,Guid>(dbContext), IRoleRepository where TDbContext : BnbDbContext<TDbContext>
+public class IdentityRoleRepository<TDbContext>(TDbContext dbContext) : BnbEfRepository<TDbContext,IdentityRole,Guid>(dbContext), IIdentityRoleRepository where TDbContext : BnbDbContext<TDbContext>
 {
     
 }

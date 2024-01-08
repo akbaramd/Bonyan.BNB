@@ -7,9 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Frameworks\Bonyan.BNB.MongoDB\Bonyan.BNB.MongoDB.csproj" />
-      <ProjectReference Include="..\..\Frameworks\Bonyan.BNB\Bonyan.BNB.csproj" />
       <ProjectReference Include="..\Bonyan.Example.Domain\Bonyan.Example.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Bonyan.BNB" Version="1.0.4" />
+      <PackageReference Include="Bonyan.BNB.MongoDB" Version="1.0.4" />
     </ItemGroup>
 
 </Project>

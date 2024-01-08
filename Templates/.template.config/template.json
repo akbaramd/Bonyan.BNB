@@ -5,9 +5,46 @@
   "identity": "BonyanExample",
   "name": "Bonyan Template",
   "shortName": "bonyan",
-  "sourceName":"Bonyan.Example",
   "tags": {
     "language": "C#",
     "type": "project"
-  }
+  },
+  "symbols": {
+    "database": {
+      "type": "parameter",
+      "datatype": "choice",
+      "allowMultipleValues": true,
+      "choices": [
+        {
+          "choice": "EF",
+          "description": "EntityFrameworkCore"
+        },
+        {
+          "choice": "Mongo",
+          "description": "MongoDB"
+        }
+        
+      ],
+      "defaultValue": "EntityFrameworkCore"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(database==EF)",
+          "exclude": [
+            "Bonyan.Example.Infrastructure.Mongo"
+          ]
+        },
+        {
+          "condition": "(database==mongo)",
+          "exclude": [
+            "Bonyan.Example.Infrastructure.EntityFrameworkCore"
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceName":"Bonyan.Example"
 }

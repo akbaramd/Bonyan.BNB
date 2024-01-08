@@ -2,7 +2,7 @@
 
 namespace Bonyan.BNB.Identity.Domain.Roles;
 
-public interface IRoleRepository : IRepository<Role,Guid>
+public interface IIdentityRoleRepository : IRepository<IdentityRole,Guid>
 {
     
 }

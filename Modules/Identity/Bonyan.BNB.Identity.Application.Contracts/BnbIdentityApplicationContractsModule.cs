@@ -16,7 +16,7 @@ public class BnbIdentityApplicationContractsModule : BnbModule
 
         Configure<BnbAutoMapperOptions>(options =>
         {
-            options.AddProfile<UserProfile>(true);
+            options.AddProfile<IdentityUserProfile>(true);
         });
         base.ConfigureServices(context);
     }
